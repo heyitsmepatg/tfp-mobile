@@ -5,8 +5,10 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 import { HomePage } from './home.page';
+import { RegistrationFormComponent } from '../registration-form/registration-form.component';
 
 @NgModule({
+  declarations: [HomePage, RegistrationFormComponent],
   imports: [
     CommonModule,
     FormsModule,
@@ -17,7 +19,6 @@ import { HomePage } from './home.page';
         component: HomePage
       }
     ])
-  ],
-  declarations: [HomePage]
+  ]
 })
 export class HomePageModule {}
