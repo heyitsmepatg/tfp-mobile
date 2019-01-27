@@ -1,12 +1,45 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Ionic Blank
+      Register
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
   The world is your oyster.
+  <ion-list>
+
+    <ion-item>
+      <ion-label position="stacked">Full Name</ion-label>
+      <ion-input type="text" clearInput value="First Last"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Email</ion-label>
+      <ion-input type="email"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label position="stacked">Password</ion-label>
+      <ion-input type="password"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Role</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Contact</ion-label>
+      <ion-input type="tel"></ion-input>
+    </ion-item>
+
+    <ion-button>
+      <ion-icon slot="start" name="create"></ion-icon>
+      Left Icon
+    </ion-button>
+  
+  </ion-list>
   <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
 </ion-content>
