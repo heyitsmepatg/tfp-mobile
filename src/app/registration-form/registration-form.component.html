@@ -1,33 +1,41 @@
-<form [formGroup]="register" (ngSubmit)="logRegistration()">
+<form [formGroup]="registrationForm" (ngSubmit)="onSubmit()" >
 
-  <ion-item>
+  <ion-item color="primary">
     <ion-label position="stacked">Full Name</ion-label>
-    <ion-input type="text" clearInput value="First Last"></ion-input>
+    <ion-input type="text" clearInput value="First Last" formControlName="name"></ion-input>
   </ion-item>
 
-  <ion-item>
+  <ion-item color="primary">
     <ion-label position="stacked">Email</ion-label>
-    <ion-input type="email"></ion-input>
+    <ion-input type="email" formControlName="email"></ion-input>
   </ion-item>
 
-  <ion-item>
+  <ion-item color="primary">
     <ion-label position="stacked">Password</ion-label>
-    <ion-input type="password"></ion-input>
+    <ion-input type="password" formControlName="password"></ion-input>
   </ion-item>
 
-  <ion-item>
+  <ion-item color="primary">
     <ion-label position="stacked">Role</ion-label>
-    <ion-input type="text"></ion-input>
+    <ion-input type="text" formControlName="role"></ion-input>
   </ion-item>
 
-  <ion-item>
+  <ion-item color="primary">
     <ion-label position="stacked">Contact</ion-label>
-    <ion-input type="tel"></ion-input>
+    <ion-input type="tel" formControlName="contact"></ion-input>
   </ion-item>
 
-  <ion-button>
+  <ion-button color="secondary" expand="block" type="submit" [disabled]="!registrationForm.valid">
     <ion-icon slot="start" name="create"></ion-icon>
     Register
   </ion-button>
 
+  <p>
+      Form Value: {{ registrationForm.value | json }}
+    </p>
+    
+    
+    <p>
+      Form Status: {{ registrationForm.status }}
+    </p>
 </form>
