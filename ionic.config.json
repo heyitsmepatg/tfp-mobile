@@ -1,5 +1,7 @@
 {
   "name": "tfp-mobile",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
