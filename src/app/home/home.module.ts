@@ -1,10 +1,8 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA  } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import { ReactiveFormsModule } from '@angular/forms';
-
 
 import { HomePage } from './home.page';
 import { RegistrationFormComponent } from '../registration-form/registration-form.component';
@@ -22,6 +20,8 @@ import { RegistrationFormComponent } from '../registration-form/registration-for
       }
     ])
   ],
-  declarations: [HomePage, RegistrationFormComponent]
+  declarations: [HomePage, RegistrationFormComponent],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
+  exports: [RegistrationFormComponent]
 })
 export class HomePageModule {}
