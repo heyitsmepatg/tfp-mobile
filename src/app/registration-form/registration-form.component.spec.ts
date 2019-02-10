@@ -1,6 +1,6 @@
 import {
-  FormBuilder,
-  FormGroup
+  //FormBuilder,
+  ReactiveFormsModule
 } from '@angular/forms';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
@@ -14,10 +14,8 @@ describe('RegistrationFormComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [ReactiveFormsModule],
       declarations: [ RegistrationFormComponent ],
-      providers: [
-        FormBuilder
-      ],
       schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
     })
     .compileComponents();
@@ -51,7 +49,7 @@ describe('RegistrationFormComponent', () => {
       "password": "password1",
       "role": "user role",
       "contact": 123456789
-      `);
-    expect(component.formData).toBe(expectedJSON);
+    }`);
+    expect(component.formData).toEqual(expectedJSON);
   });
 });

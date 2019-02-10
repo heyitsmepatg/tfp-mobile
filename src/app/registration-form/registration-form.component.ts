@@ -23,13 +23,13 @@ export class RegistrationFormComponent implements OnInit {
 
   onSubmit() {
     console.warn(this.registrationForm.value);
-    this.formData = JSON.parse(`{
-      "name": ${this.registrationForm.value.name},
-      "email": ${this.registrationForm.value.email},
-      "password": ${this.registrationForm.value.password},
-      "role": ${this.registrationForm.value.role},
-      "contact": ${this.registrationForm.value.contact}
-    }`);
+    this.formData = JSON.parse(JSON.stringify({
+      name: this.registrationForm.value.name,
+      email: this.registrationForm.value.email,
+      password: this.registrationForm.value.password,
+      role: this.registrationForm.value.role,
+      contact: this.registrationForm.value.contact
+    }));
 
     console.log(this.formData);
     
