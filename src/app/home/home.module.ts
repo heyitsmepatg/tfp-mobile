@@ -7,7 +7,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 
 import { HomePage } from './home.page';
-import { RegistrationFormComponent } from '../registration-form/registration-form.component'
+import { RegistrationFormComponent } from '../registration-form/registration-form.component';
 
 @NgModule({
   imports: [
