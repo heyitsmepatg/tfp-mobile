@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { Component, OnInit} from '@angular/core';
+import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { Validators } from '@angular/forms';
 
 @Component({
@@ -8,14 +8,14 @@ import { Validators } from '@angular/forms';
   styleUrls: ['./registration-form.component.scss']
 })
 export class RegistrationFormComponent implements OnInit {
-  registrationForm = this.fb.group({
+  registrationForm: FormGroup = this.fb.group({
     name: ['', Validators.required],
     email: ['', Validators.required],
     password: ['', Validators.required],
     role: ['', Validators.required],
     contact: ['', Validators.required]
   });
-
+  formData: JSON;
   constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
@@ -23,6 +23,16 @@ export class RegistrationFormComponent implements OnInit {
 
   onSubmit() {
     console.warn(this.registrationForm.value);
+    this.formData = JSON.parse(`{
+      "name": ${this.registrationForm.value.name},
+      "email": ${this.registrationForm.value.email},
+      "password": ${this.registrationForm.value.password},
+      "role": ${this.registrationForm.value.role},
+      "contact": ${this.registrationForm.value.contact}
+    }`);
+
+    console.log(this.formData);
+    
   }
 
 }
