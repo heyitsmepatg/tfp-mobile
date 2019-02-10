@@ -2,32 +2,32 @@
   <div>
       <ion-item>
           <ion-label position="stacked">Full Name</ion-label>
-          <ion-input type="text" clearInput formControlName="name"></ion-input>
+          <ion-input ngDefaultControl type="text" clearInput formControlName="name"></ion-input>
         </ion-item>
       
         <ion-item>
           <ion-label position="stacked">Email</ion-label>
-          <ion-input type="email" formControlName="email"></ion-input>
+          <ion-input ngDefaultControl type="email" formControlName="email"></ion-input>
         </ion-item>
       
         <ion-item>
           <ion-label position="stacked">Password</ion-label>
-          <ion-input type="password" formControlName="password"></ion-input>
+          <ion-input ngDefaultControl type="password" formControlName="password"></ion-input>
         </ion-item>
       
         <ion-item>
           <ion-label position="stacked">Role</ion-label>
-          <ion-input type="text" formControlName="role"></ion-input>
+          <ion-input ngDefaultControl type="text" formControlName="role"></ion-input>
         </ion-item>
       
         <ion-item>
           <ion-label position="stacked">Phone Number</ion-label>
-          <ion-input type="tel" formControlName="contact"></ion-input>
+          <ion-input ngDefaultControl type="tel" formControlName="contact"></ion-input>
         </ion-item>
   </div>
 
-  <ion-button color="secondary" expand="block" type="submit" [disabled]="!registrationForm.valid">
-    <ion-icon slot="start" name="register"></ion-icon>
+  <ion-button ngDefaultControl color="secondary" expand="block" type="submit" [disabled]="!registrationForm.valid">
+    <ion-icon slot="start" name="create"></ion-icon>
     REGISTER
   </ion-button>
 </form>
